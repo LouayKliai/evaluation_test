@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamation</title>
+    <style>
+        h2{
+            color: blue;
+            text-align: center;
+        }
+        table{
+            width: 50%;
+            border: 2px black;
+        }
+        button{
+            background-color: #1393fc;
+            color: white;
+            width: 80px;
+            margin-left: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 15px;
+        }
+        .titre-tableau {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .titre-partie {
+            width: 40%;
+            vertical-align: middle; /* Centre verticalement */
+        }
+        .sous-partie, .contenu-sous-partie {
+            width: 20%; /* Chaque sous-partie occupe un tiers de l'espace restant */
+        }
+        input {
+            width: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>La poste tunisienne</legend>
+        
+    <h2>Reclamation</h2>
+    Concernant <input type="text">
+    <fieldset>
+        <legend>Arremplir par le reclament</legend>
+        <label>
+            <input type="radio" name="type" value="destinataire" > Destinataire
+            <input type="radio" name="type" value="expediteur" checked> Expéditeur
+        </label>                
+        <br>
+        Addresse de l'expediteur: <textarea name="" id="" rows="4" cols="34"  placeholder="Taper l'adresse ici"></textarea>
+        <br><br>
+        Numero de Telephone*: <input type="tel" name="" id=""><br><br>
+        Motif de la reclamation: <input type="text" name="" placeholder="indiquer le motif de votre reclamation" id=""><br><br>
+        Date de la reclamation: <input type="date" name="" id=""><br><br>
+        A retourner ou a payer au: Destinataire<input type="checkbox" name="" id="">
+        Expediteur<input type="checkbox" name="" id="">
+    </fieldset>
+        <br>
+        <fieldset>
+            <legend>Indications sur l'envoi</legend>
+        
+    
+    <br>
+    <table >
+        <tr>
+            <th colspan="4" class="titre-tableau">Donnees a remplir soigneusement</th>
+        </tr>
+        <!-- second row -->
+        <tr>
+            <!-- Titre Partie 1 fusionné verticalement sur 3 lignes -->
+            <td class="titre-partie" rowspan="1">Montant</td>
+            <!-- Sous-parties en haut -->
+            <td class="sous-partie">Numero</td>
+            <td class="sous-partie">Date</td>
+            <td class="sous-partie">Bureau de depot</td>
+        </tr>       
+        <tr>
+            <td>Remboursement</td>
+            <td>VD</td>
+            <td>Mandat</td>
+            <td><input type="number" name="" id=""></td>
+            <td><input type="date" name="" id=""></td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+    </table>
+    <br>
+    <select id="description" name="description">
+        <option value="annexe">Annexé</option>
+        <option value="non_annexe">Non annexé</option>
+        <option value="autre">Autre</option>
+    </select>
+</fieldset>
+</form>
+<br><br>
+<button type="submit">Envoyer</button>
+            <button type="reset">Initialiser</button>
+</fieldset>
+</body>
+</html>

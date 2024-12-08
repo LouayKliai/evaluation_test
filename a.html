@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau avec Sous-Parties</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .titre-tableau {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .titre-partie {
+            vertical-align: middle; /* Centre verticalement */
+            font-weight: bold;
+            width: 20%; /* Définit la largeur de la première colonne */
+        }
+        .sous-partie {
+            font-weight: bold;
+            width: 26%; /* Ajuste la largeur des colonnes restantes (3 colonnes égales) */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Première ligne : Titre centré -->
+        <tr>
+            <th colspan="4" class="titre-tableau">Données à remplir soigneusement</th>
+        </tr>
+        
+        <!-- Deuxième ligne : Montant comme titre principal et sous-parties -->
+        <tr>
+            <!-- Montant fusionné verticalement sur 2 lignes -->
+            <td class="titre-partie" rowspan="2">Montant</td>
+            <td class="sous-partie">Remboursement</td>
+            <td class="sous-partie">VD</td>
+            <td class="sous-partie">Mandat</td>
+        </tr>
+        
+        <!-- Troisième ligne : Champs de saisie sous chaque sous-partie -->
+        <tr>
+            <td><input type="number" placeholder="Entrez remboursement"></td>
+            <td><input type="text" placeholder="Entrez VD"></td>
+            <td><input type="text" placeholder="Entrez mandat"></td>
+        </tr>
+    </table>
+</body>
+</html>
